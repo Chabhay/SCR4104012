@@ -1,0 +1,184 @@
+/*Global stylesheet*/
+::ng-deep .mat-form-field{
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+::ng-deep .mat-form-field-wrapper{
+  padding: 5px;
+}
+
+
+/*Dialog Component Containers*/
+/*Dialog Containers*/
+/*Dialog Containers*/
+.endorseEncRedAddCovForm{
+  display: flex;
+}
+
+.endorseEncRedAddCovContainer{
+  display: flex;
+}
+
+.endorseNetPolCovColumnContainer{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1px;
+  padding-left: 2%;
+  width: 100%;
+}
+
+.endorseRedCovColumnContainer{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1px;
+  width: 100%;
+}
+
+.endorseRemColumnContainer{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1px;
+  padding-right: 2%;
+  width: 100%;
+}
+
+.endorseEncRedAddCovTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid blue;
+  border-bottom: 2px solid blue;
+  font-weight: bold;
+  font-size: 18px;
+  height: 30px;
+}
+
+/*Dialog Labels*/
+/*Dialog Labels*/
+/*Dialog Labels*/
+
+
+.endorseEncRedAddCovLbl{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+.endorseScreenNoLbl{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 4px;
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.endorseNetPolCovLbl, .endorseReducCovLbl{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  width: 60%;
+  font-weight: bold;
+}
+
+/*Dialog Component Fields*/
+
+.endorseRemFld{
+  width: 95%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+.endorseCovDescFld, .endorseReducCovDescFld{
+  width: 85%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+
+.endorseRemFld textarea{
+  height: 45px;
+}
+
+.endorseCovFld, .endorseNetCovAmtFld, .endorseNetPremAmtFld, .endorseNetCommFld, .endorseReducCovFld, .endorseReducCovAmtFld, .endorseReducPremAmtFld, .endorseReducCommFld{
+  width: 75%;
+  font-size: 13px;
+}
+
+.endorseRemFld{
+  height: 100px;
+}
+
+/*Dialog Buttons*/
+.Buttons{
+  width: 100%;
+  font-size: 13px;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.endorseSaveBtn{
+  background-color: rgb(255, 165, 0, 0.7);
+  color: white;
+  text-decoration: none;
+  border-color: none;
+  list-style: none;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.endorseCancelBtn{
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  text-decoration: none;
+  border-color: none;
+  list-style: none;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.endorseSaveBtn:hover{
+  background-color: orange;
+}
+
+.endorseCancelBtn:hover{
+  background-color: red;
+}
+
+@media screen and (max-width: 720px){
+  .Buttons{
+    height: 5px;
+    padding: 0;
+  }
+
+  .endorseReducAddCovForm{
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+  }
+
+  .endorseEncReducAddCovContainer{
+    height: 50px;
+  }
+
+  .endorseEncRedAddCovContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .endorseNetPolCovColumnContainer, .endorseRedCovColumnContainer, .endorseRemColumnContainer{
+      width: 80%;
+      padding: 0% 10%;
+  }
+
+  .endorseEncodeReducAddCovLbl {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  ::ng-deep .mat-dialog-content{
+    max-height:66vh;
+    display: flex;
+    flex-direction: column;
+  }
+}

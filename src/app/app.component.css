@@ -1,0 +1,96 @@
+/*BUTTON*/
+
+
+.mat-raised-button{
+  display: block;
+  border-radius: 7px;
+}
+
+.mat-toolbar{
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  padding: 0 3%;
+  margin-right: 100px;
+}
+
+.mat-toolbar button{
+  background-color: blue;
+  border-color: none;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.mat-toolbar button:hover{
+  background-color: darkblue;
+  border-color: none;
+}
+
+.endorseEditBtn{
+  padding: 0;
+}
+
+/*TABLE*/
+
+
+.endorseTableContainer{
+  padding: 0 auto;
+  overflow-y: hidden;
+  margin: 0 50px;
+}
+
+.endorseCovSummTbl{
+  box-shadow: none;
+  table-layout: fixed;
+  width: 100%;
+}
+
+
+
+table {
+  width: 100%;
+}
+
+
+.mat-header-cell{
+  height: 40px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+tr.mat-row{
+  height: 15px;
+}
+
+.mat-cell{
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  border-bottom: 1px solid lightgray;
+  padding: 0 10px;
+  height: 5px;
+}
+
+th{
+  font-size: 12px;
+  border-top:solid 1px black;
+  border-bottom:solid 1px black;
+  font-size: 13px;
+}
+
+@media screen and(max-width: 500px){
+  th{
+    padding: 0 100%;
+  }
+  .tdaction{
+    width:auto;
+    align-items: center;
+    height: 100%;
+  }
+  table{
+    overflow: auto;
+  }
+}

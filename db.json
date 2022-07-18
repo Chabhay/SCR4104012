@@ -1,0 +1,62 @@
+{
+  "CoverageListSCR4104012": [
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Murder and Assault Rider",
+      "endorseNetCovAmtFld": 1000,
+      "endorseReducCovAmtFld": 6666,
+      "endorseNetPremAmtFld": 1500,
+      "endorseReducPremAmtFld": 8888,
+      "endorseNetCommFld": 1350,
+      "endorseReducCommFld": 2322.5,
+      "endorseRemFld": "    ",
+      "id": 1
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Velting lang boss",
+      "endorseNetCovAmtFld": 10,
+      "endorseReducCovAmtFld": 60,
+      "endorseNetPremAmtFld": 20,
+      "endorseReducPremAmtFld": 550,
+      "endorseNetCommFld": 30,
+      "endorseReducCommFld": 100,
+      "endorseRemFld": "Sumobra bayad mo Vel",
+      "id": 2
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Test mike",
+      "endorseNetCovAmtFld": 70,
+      "endorseReducCovAmtFld": 700,
+      "endorseNetPremAmtFld": 30,
+      "endorseReducPremAmtFld": 320,
+      "endorseNetCommFld": 52,
+      "endorseReducCommFld": 30,
+      "endorseRemFld": "Jack 123",
+      "id": 3
+    },
+    {
+      "endorseCovFld": "M&A",
+      "endorseCovDescFld": "Add Form",
+      "endorseNetCovAmtFld": 20,
+      "endorseReducCovAmtFld": 350,
+      "endorseNetPremAmtFld": 30,
+      "endorseReducPremAmtFld": 710,
+      "endorseNetCommFld": 450,
+      "endorseReducCommFld": 820,
+      "endorseRemFld": "Debugging",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

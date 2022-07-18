@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+<body>
+
+  <mat-toolbar>
+    <button class="endorseAddBtn" mat-raised-button color="primary" (click)="openDialogSCR4104012()"><mat-icon>add_circle</mat-icon>ADD ROW</button>
+  </mat-toolbar>
+
+<div class="endorseTableContainer">
+  <table mat-table [dataSource]="datasourceSCR4104012" class="endorseCovSummTbl">
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef  width="100px"></th>
+      <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center; border-right: 1px solid lightgray;">
+        <button class="btn-Delete" mat-icon-button (click)="deleteListSCR4104012(row.id)" color="warn" style="padding: 0;">
+            <mat-icon style="font-size: 20px;">remove_circle</mat-icon>
+        </button>
+
+        <button class="endorseEditBtn" mat-icon-button (click)="editItemSCR4104012(row)" color="primary">
+          <i class="fas fa-edit" style="font-size: 16px;"></i>
+      </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef width="50px">No.</th>
+      <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseCovFld">
+      <th mat-header-cell *matHeaderCellDef width="50px">Coverage</th>
+      <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseCovFld}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseCovDescFld">
+      <th mat-header-cell *matHeaderCellDef width="125px">Coverage Description</th>
+      <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseCovDescFld}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseNetCovAmtFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Net Covered Amount</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCovAmtFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseReducCovAmtFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Reduced Covered Amount</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCovAmtFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseNetPremAmtFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Net Premium Amount</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetPremAmtFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseReducPremAmtFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Reduced Premium Amount</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducPremAmtFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseNetCommFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Net Commission</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseNetCommFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseReducCommFld">
+      <th mat-header-cell *matHeaderCellDef width="90px">Reduced Commission</th>
+      <td mat-cell *matCellDef="let row" style="text-align: right;"> {{row.endorseReducCommFld | currency:" ":"symbol"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endorseRemFld">
+      <th mat-header-cell *matHeaderCellDef width="150px">Remarks</th>
+      <td mat-cell *matCellDef="let row" style="text-align: left;"> {{row.endorseRemFld}} </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsSCR4104012"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsSCR4104012;"></tr>
+  </table>
+</div>
+
+</body>
+</html>

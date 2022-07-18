@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <mat-dialog-content class="mat-typography">
+    <div>
+      <div class="endorseEncRedAddCovTitleContainer">
+        <label class="endorseTransNoLbl"></label>
+        <label class="endorseEncRedAddCovLbl">Encode&nbsp;Reduction/Addition&nbsp;in&nbsp;Coverage</label>
+        <label class="endorseScreenNoLbl">SCREEN ID: 4104012</label>
+      </div>
+        <form class="endorseEncRedAddCovForm" [formGroup]="endorseaddFormSCR4104012">
+          <div class="endorseEncRedAddCovContainer">
+            <div class="endorseNetPolCovColumnContainer">
+              <div>
+                <label><br></label>
+              </div>
+              <div class="endorseNetPolCovContainer">
+                <label class="endorseNetPolCovLbl">Net Policy Coverage</label>
+              </div>
+                <mat-form-field class="endorseCovFld" appearance="outline">
+                  <mat-label>Coverage:</mat-label>
+                  <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" id="endorseCovFld" formControlName="endorseCovFld">
+                      <mat-option value="M&A">M&A</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="endorseCovDescFld" appearance="outline">
+                  <mat-label>Coverage Description</mat-label>
+                  <input matInput placeholder="" value="" type="text" formControlName="endorseCovDescFld" ><!---->
+                </mat-form-field>
+                <mat-form-field class="endorseNetCovAmtFld" appearance="outline">
+                  <mat-label>Net Covered Amount</mat-label>
+                  <input matInput currencyMask placeholder="0.00" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseNetCovAmtFld" ><!---->
+                </mat-form-field>
+                <mat-form-field class="endorseNetPremAmtFld" appearance="outline">
+                  <mat-label>Net Premium Amount</mat-label>
+                  <input matInput currencyMask placeholder="0.00" value="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseNetPremAmtFld" ><!---->
+                </mat-form-field>
+                <mat-form-field class="endorseNetCommFld" appearance="outline">
+                  <mat-label>Net Commission</mat-label>
+                  <input matInput currencyMask placeholder="0.00" value="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseNetCommFld" ><!---->
+                </mat-form-field>
+            </div>
+            <div class="endorseRedCovColumnContainer">
+              <div class="endorseContainer">
+                <label class="endorseLbl"><br></label>
+              </div>
+              <div class="endorseReducCovContainer">
+                <label class="endorseReducCovLbl">Reduction Coverage</label>
+              </div>
+                <mat-form-field class="endorseReducCovFld" appearance="outline">
+                  <mat-label>Reduced Coverage</mat-label>
+                  <input matInput placeholder="" value="" type="text" disabled>
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCovDescFld" appearance="outline">
+                  <mat-label>Reduced Coverage Description</mat-label>
+                  <input matInput placeholder="" value="" type="text" disabled>
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCovAmtFld" appearance="outline">
+                  <mat-label>Reduced Covered Amount</mat-label>
+                  <input matInput currencyMask placeholder="0.00" value="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseReducCovAmtFld">
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducPremAmtFld" appearance="outline">
+                  <mat-label>Reduced Premium Amount</mat-label>
+                  <input matInput currencyMask placeholder="0.00" value="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseReducPremAmtFld">
+                </mat-form-field>
+
+                <mat-form-field class="endorseReducCommFld" appearance="outline">
+                  <mat-label>Reduced Commission</mat-label>
+                  <input matInput currencyMask placeholder="0.00" value="" maxlength="14" [options]="{ prefix: '', thousands: ',', decimal: '.', suffix: '' }" formControlName="endorseReducCommFld">
+                </mat-form-field>
+            </div>
+            <div class="endorseRemColumnContainer">
+              <div class="endorseRemContainer">
+                <label class="endorseRemLbl"><br></label>
+              </div>
+              <div class="endorseRemContainer">
+                <label class="endorseRemLbl"><br></label>
+              </div>
+                <mat-form-field class="endorseRemFld" appearance="outline">
+                  <mat-label>Remarks</mat-label>
+                  <textarea matInput placeholder="" value="" type="text" formControlName="endorseRemFld"></textarea>
+                </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end" class="Buttons">
+    <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="endorseSaveBtn" style="padding:.5% 3%; font-size:13px;" (click)="addListSCR4104012()">
+        <span style="display: flex; align-items: center;"><mat-icon>check_circle</mat-icon>{{actionBtn}}</span>
+    </button>
+    <button mat-raised-button mat-dialog-close class="endorseCancelBtn" style="padding: .5% 3%">
+      <span style="display: flex; align-items: center;"><mat-icon>cancel</mat-icon>{{cancelBtn}}</span>
+    </button>
+  </mat-dialog-actions>
+
+</body>
+</html>
+
